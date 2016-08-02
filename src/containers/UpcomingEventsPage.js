@@ -56,7 +56,7 @@ class AstroEventsPage extends Component {
         return (<AstroCard key={i} data={r} />)
       })
       todaysEventsComp = (
-        <div style={{display: 'flex', flexDirection: 'column', fontSize: '5vw'}}>
+        <div style={{display: 'flex', flexDirection: 'column', fontSize: '3vw'}}>
           Within the 24 hours:
           <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', fontSize: 'initial'}}>
             {todaysEventsDivs}
@@ -70,7 +70,7 @@ class AstroEventsPage extends Component {
         return (<AstroCard key={i} data={r} />)
       })
       oneWeekEventsComp = (
-        <div style={{display: 'flex', flexDirection: 'column', fontSize: '5vw'}}>
+        <div style={{display: 'flex', flexDirection: 'column', fontSize: '3vw'}}>
           Within the next week:
           <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', fontSize: 'initial'}}>
             {oneWeekEventsDivs}
@@ -84,7 +84,7 @@ class AstroEventsPage extends Component {
         return (<AstroCard key={i} data={r} />)
       })
       twoWeeksEventComp = (
-        <div style={{display: 'flex', flexDirection: 'column', fontSize: '5vw', backgroundColor: 'rgba(255,255,255,.1)', borderRadius: 10}}>
+        <div style={{display: 'flex', flexDirection: 'column', fontSize: '3vw', backgroundColor: 'rgba(255,255,255,.1)', borderRadius: 10}}>
           Within the next two weeks:
           <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', fontSize: 'initial'}}>
             {twoWeeksEventsDivs}
@@ -104,7 +104,7 @@ class AstroEventsPage extends Component {
   }
   render() {
     return (
-      <div>{this.renderEvents()}a</div>
+      <div>{this.renderEvents()}</div>
     )
   }
 }

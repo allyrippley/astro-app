@@ -14,9 +14,11 @@ export default {
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: 'rgba(255,255,255,.9)',
+    backgroundColor: 'rgba(255,255,255,.4)',
     color: 'rgba(0,0,0,.9)',
-    padding: 5
+    padding: 5,
+    display: 'flex',
+    justifyContent: 'space-around'
   },
   link: {
   }

@@ -18,12 +18,35 @@ const App = (props) => {
   if(multi) {
     return (
       <Link to={url}>
-        <div style={{backgroundColor: '#27292d', height: 250, margin: 20, padding: 10, borderRadius: 5, color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'stretch'}} key={data.id}>
-          <span style={{display: 'flex', position: 'relative', justifyContent: 'center'}}><img height="100" width="100" src={planetUrls[multiPlanets[0]]}/><img style={{position: 'absolute', left: 70}} height="100" width="100" src={planetUrls[multiPlanets[1]]}/></span>
-          <span>{string.capitalize(multiPlanets[0])} and {string.capitalize(multiPlanets[1])}</span>
-          <span>{string.capitalize(data.type)} in {string.capitalize(data.sign)}</span>
-          <span>{data.degree && degreeDisplay}</span>
-          <span>{moment(data.date).format('MMMM Do YYYY, h:mm:ss a')}</span>
+        <div style={{
+            backgroundColor: '#27292d',
+            height: 250,
+            margin: 20,
+            padding: 10,
+            borderRadius: 5,
+            color: '#fff',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            alignItems: 'center'
+          }}
+          key={data.id}>
+          <div style={{
+              display: 'flex'
+            }}
+          >
+            <span style={{display: 'flex', position: 'relative', justifyContent: 'center'}}><img height="100" width="100" src={planetUrls[multiPlanets[0]]}/><img style={{position: 'absolute', left: 70}} height="100" width="100" src={planetUrls[multiPlanets[1]]}/></span>
+          </div>
+          <div style={{
+              display: 'flex',
+              flexDirection: 'column'
+            }}
+          >
+            <span>{string.capitalize(multiPlanets[0])} and {string.capitalize(multiPlanets[1])}</span>
+            <span>{string.capitalize(data.type)} in {string.capitalize(data.sign)}</span>
+            <span>{data.degree && degreeDisplay}</span>
+            <span>{moment(data.date).format('MMMM Do YYYY, h:mm:ss a')}</span>
+          </div>
         </div>
       </Link>
     )
