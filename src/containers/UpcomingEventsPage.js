@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as actions from '../actions/astroEventsActions'
 import AstroCard from '../components/AstroCard'
+import radium from 'radium'
 
 class AstroEventsPage extends Component {
   constructor(props) {
@@ -56,9 +57,9 @@ class AstroEventsPage extends Component {
         return (<AstroCard key={i} data={r} />)
       })
       todaysEventsComp = (
-        <div style={{display: 'flex', flexDirection: 'column', fontSize: '3vw'}}>
+        <div style={{display: 'flex', flexDirection: 'column', fontSize: '18px', alignItems: 'flex-start', padding: 10}}>
           Within the 24 hours:
-          <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', fontSize: 'initial'}}>
+          <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-start', fontSize: 'initial'}}>
             {todaysEventsDivs}
           </div>
         </div>
@@ -70,9 +71,9 @@ class AstroEventsPage extends Component {
         return (<AstroCard key={i} data={r} />)
       })
       oneWeekEventsComp = (
-        <div style={{display: 'flex', flexDirection: 'column', fontSize: '3vw'}}>
+        <div style={{display: 'flex', flexDirection: 'column', fontSize: '18px', alignItems: 'flex-start', padding: 10}}>
           Within the next week:
-          <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', fontSize: 'initial'}}>
+          <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-start', fontSize: 'initial'}}>
             {oneWeekEventsDivs}
           </div>
         </div>
@@ -84,9 +85,9 @@ class AstroEventsPage extends Component {
         return (<AstroCard key={i} data={r} />)
       })
       twoWeeksEventComp = (
-        <div style={{display: 'flex', flexDirection: 'column', fontSize: '3vw', backgroundColor: 'rgba(255,255,255,.1)', borderRadius: 10}}>
+        <div style={{display: 'flex', flexDirection: 'column', fontSize: '18px', backgroundColor: 'rgba(255,255,255,.1)', borderRadius: 10, alignItems: 'flex-start', padding: 10}}>
           Within the next two weeks:
-          <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', fontSize: 'initial'}}>
+          <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-start', fontSize: 'initial'}}>
             {twoWeeksEventsDivs}
           </div>
         </div>
@@ -96,7 +97,7 @@ class AstroEventsPage extends Component {
     //   return (<AstroCard key={i} data={r} />)
     // })
     return (
-      <div style={{display: 'flex', flexDirection: 'column', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
+      <div style={{display: 'flex', flexDirection: 'column', flexWrap: 'wrap', alignItems: 'flex-start', justifyContent: 'center'}}>
         {todaysEventsToggle && todaysEventsComp}
         {oneWeekEventsToggle && oneWeekEventsComp}
         {twoWeeksEventsToggle && twoWeeksEventComp}
@@ -129,4 +130,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(AstroEventsPage)
+)(radium(AstroEventsPage))

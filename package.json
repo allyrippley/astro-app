@@ -30,6 +30,7 @@
     "radium": "0.18.1",
     "react": "15.0.2",
     "react-dom": "15.0.2",
+    "react-fontawesome": "1.1.0",
     "react-redux": "4.4.5",
     "react-router": "2.4.0",
     "redux": "3.5.2"
@@ -62,6 +63,8 @@
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.5",
     "isparta": "4.0.0",
+    "less": "2.7.1",
+    "less-loader": "2.2.3",
     "mocha": "2.4.5",
     "node-sass": "3.7.0",
     "npm-run-all": "1.8.0",

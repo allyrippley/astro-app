@@ -210,37 +210,108 @@ const data = [{
   },
   {
     "id": 32,
-    "date": "2016-08-30T02:06:00",
+    "date": "2016-08-29T02:06:00",
     "planet": "venus",
     "type": "enters",
     "sign": "libra",
     "degree": ""
   },
   {
-    "id": 25,
+    "id": 33,
+    "date": "2016-08-30T01:04:00",
+    "planet": "mercury",
+    "type": "retrograde",
+    "sign": "virgo",
+    "degree": "29:05"
+  },
+  {
+    "id": 34,
+    "date": "2016-08-31T03:43:00",
+    "planet": "jupiter,saturn",
+    "type": "quintile",
+    "sign": "taurus",
+    "degree": "28:02,10:02"
+  },
+  {
+    "id": 35,
     "date": "2016-09-01T09:03:00",
-    "planet": "moon",
-    "type": "new",
-    "sign": "",
-    "degree": ""
+    "planet": "sun",
+    "type": "eclipse",
+    "sign": "virgo",
+    "degree": "09:21"
   },
   {
-    "id": 23,
-    "date": "2016-08-02T20:44:00",
-    "planet": "moon",
-    "type": "new",
-    "sign": "",
-    "degree": ""
+    "id": 36,
+    "date": "2016-09-09T11:18:00",
+    "planet": "jupiter",
+    "type": "enters",
+    "sign": "libra",
+    "degree": "0"
   },
   {
-    "id": 23,
-    "date": "2016-08-02T20:44:00",
-    "planet": "moon",
-    "type": "new",
-    "sign": "",
-    "degree": ""
+    "id": 37,
+    "date": "2016-09-10T13:04:00",
+    "planet": "saturn,neptune",
+    "type": "square",
+    "sign": "sagittarius,pisces",
+    "degree": "10:25"
+  },
+  {
+    "id": 38,
+    "date": "2016-09-16T19:05:00",
+    "planet": "saturn,neptune",
+    "type": "square",
+    "sign": "sagittarius,pisces",
+    "degree": "10:25"
+  },
+  {
+    "id": 39,
+    "date": "2016-09-22T05:30:00",
+    "planet": "mercury",
+    "type": "direct",
+    "sign": "virgo",
+    "degree": "14:49"
+  },
+  {
+    "id": 40,
+    "date": "2016-09-22T14:21:00",
+    "planet": "sun",
+    "type": "enters",
+    "sign": "libra",
+    "degree": "0"
+  },
+  {
+    "id": 41,
+    "date": "2016-09-23T14:51:00",
+    "planet": "venus",
+    "type": "enters",
+    "sign": "scorpio",
+    "degree": "0"
+  },
+  {
+    "id": 42,
+    "date": "2016-09-26T15:02:00",
+    "planet": "pluto",
+    "type": "direct",
+    "sign": "capricorn",
+    "degree": "14:55"
+  },
+  {
+    "id": 43,
+    "date": "2016-09-27T15:02:00",
+    "planet": "mars",
+    "type": "enters",
+    "sign": "capricorn",
+    "degree": "0"
+  },
+  {
+    "id": 44,
+    "date": "2016-09-30T20:11:00",
+    "planet": "new",
+    "type": "moon",
+    "sign": "libra",
+    "degree": "08:15"
   }
-
 ]
 
 export default data

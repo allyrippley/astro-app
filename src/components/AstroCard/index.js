@@ -18,7 +18,7 @@ const App = (props) => {
   if(multi) {
     return (
       <Link to={url}>
-        <div style={{backgroundColor: '#27292d', height: 250, margin: 20, padding: 10, borderRadius: 5, color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'stretch'}} key={data.id}>
+        <div style={{backgroundColor: '#27292d', height: 250, margin: 20, padding: 10, borderRadius: 5, color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'stretch', textAlign: 'center'}} key={data.id}>
           <span style={{display: 'flex', position: 'relative', justifyContent: 'center'}}><img height="100" width="100" src={planetUrls[multiPlanets[0]]}/><img style={{position: 'absolute', left: 70}} height="100" width="100" src={planetUrls[multiPlanets[1]]}/></span>
           <span>{string.capitalize(multiPlanets[0])} and {string.capitalize(multiPlanets[1])}</span>
           <span>{string.capitalize(data.type)} in {string.capitalize(data.sign)}</span>
@@ -30,7 +30,7 @@ const App = (props) => {
   } else {
     return (
       <Link to={url}>
-        <div style={{backgroundColor: '#27292d', height: 250, margin: 20, padding: 10, borderRadius: 5, color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center'}} key={data.id}>
+        <div style={{backgroundColor: '#27292d', height: 250, margin: 20, padding: 10, borderRadius: 5, color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center'}} key={data.id}>
           <span><img height="100" width="100" src={planetUrls[data.planet]}/></span>
           <span>{string.capitalize(data.planet)}</span>
           <span>{string.capitalize(data.type)} in {string.capitalize(data.sign)}</span>

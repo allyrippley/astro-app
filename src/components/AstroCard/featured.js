@@ -39,7 +39,8 @@ const App = (props) => {
           </div>
           <div style={{
               display: 'flex',
-              flexDirection: 'column'
+              flexDirection: 'column',
+              textAlign: 'center'
             }}
           >
             <span>{string.capitalize(multiPlanets[0])} and {string.capitalize(multiPlanets[1])}</span>
@@ -53,7 +54,7 @@ const App = (props) => {
   } else {
     return (
       <Link to={url}>
-        <div style={{backgroundColor: '#27292d', height: 250, margin: 20, padding: 10, borderRadius: 5, color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center'}} key={data.id}>
+        <div style={{backgroundColor: '#27292d', height: 250, margin: 20, padding: 10, borderRadius: 5, color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center'}} key={data.id}>
           <span><img height="100" width="100" src={planetUrls[data.planet]}/></span>
           <span>{string.capitalize(data.planet)}</span>
           <span>{string.capitalize(data.type)} in {string.capitalize(data.sign)}</span>

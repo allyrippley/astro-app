@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { Router, browserHistory } from 'react-router'
 import routes from './routes'
 import configureStore from './store/configureStore'
+import styles from './styles.less'
 require('./favicon.ico') // Tell webpack to load favicon.ico
 const store = configureStore()
 render(
