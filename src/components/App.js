@@ -1,10 +1,11 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 import { Link, IndexLink } from 'react-router'
 import styles from './styles'
 import radium from 'radium'
 import moment from 'moment'
+import { connect } from 'react-redux'
 import Fa from 'react-fontawesome'
-class App extends Component{
+class App extends React.Component {
   constructor(props){
     super(props)
     this.time = `${moment(Date.now()).format('h:mm a')}   `
@@ -18,9 +19,12 @@ class App extends Component{
     }, 1500)
     setInterval(() => {this.time += 1}, 1000)
   }
+  toggleSidebar() {
+
+  }
   render() {
     return (
-      <div style={[styles.root, {backgroundColor: '#212326'}]}>
+      <div className="root" style={[styles.root, {backgroundColor: '#212326'}]}>
         <div style={styles.toolbar}>
           <span style={{fontWeight: 'lighter', paddingTop: 30, maxWidth: 100}}>{this.time.substr(0,8)}</span>
           <div style={styles.linkHolder}>
@@ -35,7 +39,7 @@ class App extends Component{
         </div>
         <div style={styles.container}>
           <div style={styles.logoHolder}>
-            <Fa name="bars" styles={{display: 'none'}} />
+            <Fa name="bars" style={{display: 'none'}} />
             <Link to="/">
               <div id="logo" style={{position: 'relative', width: '40%', maxWidth: '300px', left: '10%', paddingTop: 10}}>
                 <img style={{width: '100%', height: 'auto'}} src={require('../img/logo.png')} />
@@ -55,4 +59,10 @@ App.propTypes = {
   children: PropTypes.element
 }
 
-export default radium(App)
+function mapStateToProps(state) {
+  return {
+    showSidebar: state.showSidebar
+  }
+}
+
+export default connect(mapStateToProps)(radium(App))
